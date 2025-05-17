@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializedBakingSet: {fileID: 11400000, guid: 84b2147e15f275f4cb23eb4e0c6ea37d, type: 2}
-  sceneGUID: 1583f5b4f1fcaea459787ab63e9054a2
+  sceneGUID: b2bc5081587da42489e1ffa50953239b
   obsoleteAsset: {fileID: 0}
   obsoleteCellSharedDataAsset: {fileID: 0}
   obsoleteCellSupportDataAsset: {fileID: 0}
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 1
-  size: {x: 153.01001, y: 88.479706, z: 153.01001}
+  size: {x: 150.02, y: 85.48971, z: 150.02}
   overrideRendererFilters: 0
   minRendererVolumeSize: 0.1
   objectLayerMask:
