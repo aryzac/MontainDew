@@ -1,15 +1,13 @@
 ﻿// ========== MassiveLODBuilderEditor.cs ==========
 // Ubicación: Assets/Editor/MassiveLODBuilderEditor.cs
-// Este script llama a GenerarLODs() directamente sobre el prefab asset
 
 #if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
-using System.Collections.Generic;
 
 public static class MassiveLODBuilderEditor
 {
-    const string MENU = "Assets/🔧 Generar LODs en Prefab";
+    const string MENU = "Assets/⚙ Generar LODs en Prefab";
 
     [MenuItem(MENU, true)]
     static bool ValidatePrefabLOD()
@@ -22,26 +20,30 @@ public static class MassiveLODBuilderEditor
     [MenuItem(MENU)]
     static void GenerateLODForPrefabs()
     {
+        Debug.Log("[LOD▶Prefab] Invocado");
         foreach (var sel in Selection.objects)
         {
             var path = AssetDatabase.GetAssetPath(sel);
-            if (string.IsNullOrEmpty(path) || !path.EndsWith(".prefab")) continue;
+            if (string.IsNullOrEmpty(path) || !path.EndsWith(".prefab"))
+            {
+                Debug.LogWarning($"[LOD▶Prefab] Omitido no-prefab: {path}");
+                continue;
+            }
 
-            // Carga prefab en memoria
+            Debug.Log($"[LOD▶Prefab] Cargando prefab: {path}");
             var root = PrefabUtility.LoadPrefabContents(path);
-            var builder = root.GetComponent<MassiveLODBuilder>();
-            if (builder == null)
-                builder = root.AddComponent<MassiveLODBuilder>();
+            var builder = root.GetComponent<MassiveLODBuilder>() ?? root.AddComponent<MassiveLODBuilder>();
+            builder.GenerarLODs();  // ahora accesible públicamente
 
-            // Llama a la misma función
-            builder.GenerarLODs();
+            Debug.Log($"[LOD▶Prefab] Guardando prefab asset: {path}");
+            PrefabUtility.SaveAsPrefabAsset(root, path);
 
-            // Guarda y descarga
-            PrefabUtility.SaveAsPrefabAssetAndConnect(root, path, InteractionMode.UserAction);
             PrefabUtility.UnloadPrefabContents(root);
+            Debug.Log($"[LOD▶Prefab] Finalizado prefab: {path}");
         }
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
+        Debug.Log("[LOD▶Prefab] Todos completados.");
     }
 }
 #endif

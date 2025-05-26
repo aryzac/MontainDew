@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 23480878569182784}
   - component: {fileID: 64209454658281450}
   - component: {fileID: 136636269291330438}
-  - component: {fileID: 2225738581396861501}
-  - component: {fileID: 6249262986467046928}
   m_Layer: 0
   m_Name: forestpack_tree_fir_tall
   m_TagString: Untagged
@@ -107,7 +105,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -135,45 +133,3 @@ CapsuleCollider:
   m_Height: 3.5331335
   m_Direction: 1
   m_Center: {x: 0.04, y: 1.6552377, z: -0.01}
---- !u!114 &2225738581396861501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210459693873458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bc9f748c63b1a8409a0b967bd00b58b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  calidadLOD0: 1
-  calidadLOD1: 0.5
-  calidadLOD2: 0.2
---- !u!205 &6249262986467046928
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210459693873458}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.015708327, y: 1.6791589, z: -0.073471904}
-  m_Size: 3.580976
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.6
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 0}
-  - screenRelativeHeight: 0.3
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 0}
-  - screenRelativeHeight: 0.1
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 0}
-  m_Enabled: 1
