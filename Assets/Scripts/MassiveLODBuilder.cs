@@ -57,16 +57,15 @@ public class MassiveLODBuilder : MonoBehaviour
                 continue;
             }
 
-            // Desactiva solo la pieza original
-            go.SetActive(false);
-
-            // LOD0: reutiliza original si calidad=1, sino clona
+            // LOD0: reutiliza original si calidad=1, sino clona y desactiva original
             if (calidadLOD0 >= 1f)
             {
                 lod0List.Add(go.GetComponent<Renderer>());
+                // dejar original activo para LOD0
             }
             else
             {
+                go.SetActive(false);
                 var c0 = CloneAndOptimize(go, "_LOD0", padre, calidadLOD0);
                 lod0List.Add(c0.GetComponent<Renderer>());
             }
