@@ -1,139 +1,137 @@
-﻿// ✅ PRIMERA PARTE: FUNCIONA SOBRE INSTANCIAS EN ESCENA
-// Ejecutar solo en objetos que están en la jerarquía, no en el panel Project
+﻿// ========== MassiveLODBuilder.cs ==========
+// Ubicación: Assets/Scripts/MassiveLODBuilder.cs
+// Este script se adjunta al GameObject raíz de tu prefab o escena.
 
 using UnityEngine;
-using UnityEditor;
 using System.Collections.Generic;
 using System.Reflection;
-using System.IO;
 
 public class MassiveLODBuilder : MonoBehaviour
 {
     [Header("Calidad por LOD (0 = peor, 1 = original)")]
-    [Range(0f, 1f)] public float calidadLOD0 = 1.0f;
+    [Range(0f, 1f)] public float calidadLOD0 = 1f;
     [Range(0f, 1f)] public float calidadLOD1 = 0.5f;
     [Range(0f, 1f)] public float calidadLOD2 = 0.2f;
 
     private const string carpetaDestino = "Assets/MeshesOptimized/";
 
-    [ContextMenu("⚙ Generar LODs (Instancia en Escena)")]
-    void GenerarLODs()
+    // Genera LODs en la escena (instancia)
+    [ContextMenu("🔧 Generar LODs (Instancia)")]
+    public void GenerarLODs()
     {
-        if (!AssetDatabase.IsValidFolder(carpetaDestino.TrimEnd('/')))
+        Debug.Log("[LOD] Iniciando GenerarLODs() en instancia.");
+        // Asegura carpeta destino
+        if (!System.IO.Directory.Exists(carpetaDestino))
         {
-            Directory.CreateDirectory(carpetaDestino);
-            AssetDatabase.Refresh();
+            System.IO.Directory.CreateDirectory(carpetaDestino);
+            Debug.Log($"[LOD] Carpeta creada: {carpetaDestino}");
         }
 
-        Transform padre = this.transform;
+        // Lista de originales
+        var originales = new List<MeshRenderer>(GetComponentsInChildren<MeshRenderer>(false));
+        Debug.Log($"[LOD] Encontrados {originales.Count} MeshRenderers originales.");
 
-        List<Renderer> lod0Renderers = new List<Renderer>();
-        List<Renderer> lod1Renderers = new List<Renderer>();
-        List<Renderer> lod2Renderers = new List<Renderer>();
-
-        MeshRenderer[] renderers = padre.GetComponentsInChildren<MeshRenderer>(includeInactive: false);
-        Debug.Log($"📦 Se encontraron {renderers.Length} objetos con MeshRenderer");
-
-        foreach (var renderer in renderers)
+        // Limpiar clones previos
+        foreach (Transform hijo in transform)
         {
-            GameObject originalGO = renderer.gameObject;
-            MeshFilter originalMF = originalGO.GetComponent<MeshFilter>();
-            if (originalMF == null || originalMF.sharedMesh == null)
+            if (hijo.name.EndsWith("_LOD0") || hijo.name.EndsWith("_LOD1") || hijo.name.EndsWith("_LOD2"))
             {
-                Debug.LogWarning($"⚠️ '{originalGO.name}' no tiene MeshFilter o mesh asignado.");
+                Debug.Log($"[LOD] Eliminando clon previo: {hijo.name}");
+                DestroyImmediate(hijo.gameObject);
+            }
+        }
+
+        // Listas por nivel
+        var lod0 = new List<Renderer>();
+        var lod1 = new List<Renderer>();
+        var lod2 = new List<Renderer>();
+
+        // Crear y optimizar clones
+        foreach (var mr in originales)
+        {
+            var go = mr.gameObject;
+            var mf = go.GetComponent<MeshFilter>();
+            if (mf == null || mf.sharedMesh == null)
+            {
+                Debug.Log($"[LOD] Saltando {go.name}, sin MeshFilter o mesh.");
                 continue;
             }
 
-            GameObject lod0 = null;
+            // LOD0
+            GameObject c0 = calidadLOD0 < 1f ? CloneAndOptimize(go, "_LOD0", calidadLOD0) : CloneSimple(go, "_LOD0");
+            lod0.Add(c0.GetComponent<Renderer>());
+            Debug.Log($"[LOD] Clon LOD0 creado: {c0.name}");
 
-            if (calidadLOD0 < 1f)
-            {
-                lod0 = ClonarYOptimizar(originalGO, "_LOD0", originalGO.transform.parent, calidadLOD0);
-                lod0Renderers.AddRange(lod0.GetComponentsInChildren<Renderer>());
-            }
-            else
-            {
-                lod0 = Instantiate(originalGO, originalGO.transform.parent);
-                lod0.name = originalGO.name + "_LOD0";
-                lod0.transform.localPosition = originalGO.transform.localPosition;
-                lod0.transform.localRotation = originalGO.transform.localRotation;
-                lod0.transform.localScale = originalGO.transform.localScale;
-                lod0Renderers.AddRange(lod0.GetComponentsInChildren<Renderer>());
-            }
-
+            // LOD1
             if (calidadLOD1 < 1f)
             {
-                GameObject lod1 = ClonarYOptimizar(originalGO, "_LOD1", originalGO.transform.parent, calidadLOD1);
-                lod1Renderers.AddRange(lod1.GetComponentsInChildren<Renderer>());
+                var c1 = CloneAndOptimize(go, "_LOD1", calidadLOD1);
+                lod1.Add(c1.GetComponent<Renderer>());
+                Debug.Log($"[LOD] Clon LOD1 creado: {c1.name}");
             }
-
+            // LOD2
             if (calidadLOD2 < 1f)
             {
-                GameObject lod2 = ClonarYOptimizar(originalGO, "_LOD2", originalGO.transform.parent, calidadLOD2);
-                lod2Renderers.AddRange(lod2.GetComponentsInChildren<Renderer>());
+                var c2 = CloneAndOptimize(go, "_LOD2", calidadLOD2);
+                lod2.Add(c2.GetComponent<Renderer>());
+                Debug.Log($"[LOD] Clon LOD2 creado: {c2.name}");
             }
 
             // Desactivar original
-            originalGO.SetActive(false);
+            go.SetActive(false);
         }
 
-        LODGroup lodGroup = padre.GetComponent<LODGroup>();
-        if (!lodGroup)
-            lodGroup = padre.gameObject.AddComponent<LODGroup>();
+        // Configurar o crear LODGroup
+        LODGroup lg = GetComponent<LODGroup>();
+        if (lg == null)
+        {
+            Debug.Log("[LOD] No se encontró LODGroup, agregando uno nuevo.");
+            lg = gameObject.AddComponent<LODGroup>();
+        }
+        else Debug.Log("[LOD] LODGroup existente encontrado.");
 
-        List<LOD> lodsList = new List<LOD>();
-        if (lod0Renderers.Count > 0) lodsList.Add(new LOD(0.6f, lod0Renderers.ToArray()));
-        if (lod1Renderers.Count > 0) lodsList.Add(new LOD(0.3f, lod1Renderers.ToArray()));
-        if (lod2Renderers.Count > 0) lodsList.Add(new LOD(0.1f, lod2Renderers.ToArray()));
+        var lods = new List<LOD>();
+        if (lod0.Count > 0) lods.Add(new LOD(0.6f, lod0.ToArray()));
+        if (lod1.Count > 0) lods.Add(new LOD(0.3f, lod1.ToArray()));
+        if (lod2.Count > 0) lods.Add(new LOD(0.1f, lod2.ToArray()));
 
-        lodGroup.SetLODs(lodsList.ToArray());
-        lodGroup.RecalculateBounds();
-
-        Debug.Log("✅ LODGroup generado correctamente y jerarquía preservada.");
+        lg.SetLODs(lods.ToArray());
+        lg.RecalculateBounds();
+        Debug.Log($"[LOD] LODGroup configurado con {lods.Count} niveles.");
     }
 
-    GameObject ClonarYOptimizar(GameObject original, string sufijo, Transform destino, float calidad)
+    // Clon simple sin optimizar
+    GameObject CloneSimple(GameObject original, string sufijo)
     {
-        GameObject clone = Instantiate(original);
+        var clone = Instantiate(original, transform);
         clone.name = original.name + sufijo;
-        clone.transform.SetParent(destino);
         clone.transform.localPosition = original.transform.localPosition;
         clone.transform.localRotation = original.transform.localRotation;
         clone.transform.localScale = original.transform.localScale;
-
-        MeshFilter mf = clone.GetComponent<MeshFilter>();
-        MeshRenderer mr = clone.GetComponent<MeshRenderer>();
-
-        if (!mf || !mr || mf.sharedMesh == null) return clone;
-
-        var optimizer = clone.AddComponent<OptimizeMesh>();
-        SetPrivateField(optimizer, "_quality", calidad);
-        SetPrivateField(optimizer, "_renderer", mf);
-        SetPrivateField(optimizer, "_mesh", mf.sharedMesh);
-
-        var decimate = optimizer.GetType().GetMethod("DecimateMesh", BindingFlags.Instance | BindingFlags.Public);
-        decimate?.Invoke(optimizer, null);
-
-        string nombreMesh = $"Optimized__{clone.name.ToLower()}.asset";
-        string path = Path.Combine(carpetaDestino, nombreMesh).Replace("\\", "/");
-
-        Mesh meshParaGuardar = Object.Instantiate(mf.sharedMesh);
-        AssetDatabase.CreateAsset(meshParaGuardar, path);
-        AssetDatabase.SaveAssets();
-        AssetDatabase.Refresh();
-
-        Mesh meshCargado = AssetDatabase.LoadAssetAtPath<Mesh>(path);
-        mf.sharedMesh = meshCargado;
-
-        Debug.Log($"💾 Mesh guardado: {path}");
-
         return clone;
     }
 
-    void SetPrivateField(Component target, string fieldName, object value)
+    // Clon y optimización via reflection a OptimizeMesh
+    GameObject CloneAndOptimize(GameObject original, string sufijo, float calidad)
     {
-        var field = target.GetType().GetField(fieldName, BindingFlags.Instance | BindingFlags.NonPublic);
-        if (field != null)
-            field.SetValue(target, value);
+        var clone = CloneSimple(original, sufijo);
+        var mf = clone.GetComponent<MeshFilter>();
+        var optimizer = clone.AddComponent<OptimizeMesh>();
+        var t = optimizer.GetType();
+        t.GetField("_quality", BindingFlags.Instance | BindingFlags.NonPublic)?.SetValue(optimizer, calidad);
+        t.GetField("_renderer", BindingFlags.Instance | BindingFlags.NonPublic)?.SetValue(optimizer, mf);
+        t.GetField("_mesh", BindingFlags.Instance | BindingFlags.NonPublic)?.SetValue(optimizer, mf.sharedMesh);
+        t.GetMethod("DecimateMesh", BindingFlags.Instance | BindingFlags.Public)?.Invoke(optimizer, null);
+
+        // Guardar mesh optimizado
+        var meshCopy = Instantiate(mf.sharedMesh);
+        var path = carpetaDestino + "optimized__" + clone.name + ".asset";
+#if UNITY_EDITOR
+        UnityEditor.AssetDatabase.CreateAsset(meshCopy, path);
+        mf.sharedMesh = UnityEditor.AssetDatabase.LoadAssetAtPath<Mesh>(path);
+        Debug.Log($"[LOD] Mesh optimizado guardado en: {path}");
+#endif
+
+        return clone;
     }
 }
