@@ -1,9 +1,11 @@
 fileFormatVersion: 2
-guid: fd2b8b2ca379e3546be46f0e1972892b
+guid: d8e82664aa8686642a424c88ab10164a
 ShaderImporter:
-  externalObjects: {}
-  defaultTextures: []
-  nonModifiableTextures: []
   userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/DepthOfFieldDX11.shader
+  uploadId: 96407

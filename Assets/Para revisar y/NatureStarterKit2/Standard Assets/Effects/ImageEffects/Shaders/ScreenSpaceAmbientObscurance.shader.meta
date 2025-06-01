@@ -1,9 +1,11 @@
 fileFormatVersion: 2
-guid: 20dd83fd894479a4b91ca91bda229a92
+guid: 95616c020c5604dda96cf76afbbc0272
 ShaderImporter:
-  externalObjects: {}
-  defaultTextures: []
-  nonModifiableTextures: []
   userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/ScreenSpaceAmbientObscurance.shader
+  uploadId: 96407

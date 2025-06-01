@@ -1,8 +1,12 @@
 fileFormatVersion: 2
-guid: 1d45c0ccbf0144f44ac4b7cfbf418810
+guid: a3384ef3e2313034f9016ad8a1f3999f
 NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
   userData: 
   assetBundleName: 
-  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/TessellationShaders/Materials/TesselatedBumpSpecular.mat
+  uploadId: 96407

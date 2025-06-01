@@ -1,9 +1,11 @@
 fileFormatVersion: 2
-guid: 79b0aed08300bcd40bbb540315a015b1
+guid: 186c4c0d31e314f049595dcbaf4ca129
 ShaderImporter:
-  externalObjects: {}
-  defaultTextures: []
-  nonModifiableTextures: []
   userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 52977
+  packageName: Nature Starter Kit 2
+  packageVersion: 1.0
+  assetPath: Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/BrightPassFilter.shader
+  uploadId: 96407

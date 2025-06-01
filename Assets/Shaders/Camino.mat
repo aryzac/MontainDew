@@ -29,7 +29,7 @@ Material:
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: 3003
+  m_CustomRenderQueue: 3022
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
@@ -61,9 +61,10 @@ Material:
     m_Floats:
     - _Float: 10
     - _Intensidad: 2.79
-    - _IntensidadNormal: 4.36
-    - _MezclacMainSecondTexture: 4.28
-    - _QueueOffset: 3
+    - _IntensidadNormal: -0.63
+    - _MezclacMainSecondTexture: 1.01
+    - _QueueControl: 0
+    - _QueueOffset: 22
     m_Colors:
     - _Offset: {r: 1, g: 1, b: 0, a: 0}
     - _Tiling: {r: 3, g: 3, b: 0, a: 0}
