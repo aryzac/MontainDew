@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3038900141349147205}
   - component: {fileID: 8445258751036589454}
   m_Layer: 0
-  m_Name: forestpack_tree_fir_tall
+  m_Name: Pino
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 205512977738328948}
   - component: {fileID: 136712213243828740}
   m_Layer: 0
-  m_Name: forestpack_tree_stump_1
+  m_Name: ArbolTalado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

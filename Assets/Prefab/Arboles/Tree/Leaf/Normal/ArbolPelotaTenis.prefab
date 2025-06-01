@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 205548538367759612}
   - component: {fileID: 136328532474461060}
   m_Layer: 0
-  m_Name: forestpack_tree_1_leaf_1
+  m_Name: ArbolPelotaTenis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
