@@ -3,12 +3,7 @@ guid: 5dd1f4999f8f4c44ab09f0ca3c58555f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: material0
-    second: {fileID: 2100000, guid: 9d54433b085ea13498f0a2e513903c0b, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -20,7 +15,7 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
-    motionNodeName: <Root Transform>
+    motionNodeName: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -40,15 +35,15 @@ ModelImporter:
       takeName: Model|Girar
       internalID: -8957823972209622414
       firstFrame: 0
-      lastFrame: 99
+      lastFrame: 239
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
-      cycleOffset: 5
+      cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 1
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
