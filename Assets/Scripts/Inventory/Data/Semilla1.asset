@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b2562cbacd056849b06d189a241bb2f, type: 3}
+  m_Name: Semilla1
+  m_EditorClassIdentifier: 
+  id: inventoryItem_semilla1
+  itemName: semilla1
+  itemIcon: {fileID: 21300000, guid: eeeb56e8a404fde42af375a19279e7da, type: 3}
+  itemPrefab: {fileID: 6169200417677416508, guid: 5340d3f222a9e6d43a6b2e5db59c597c, type: 3}

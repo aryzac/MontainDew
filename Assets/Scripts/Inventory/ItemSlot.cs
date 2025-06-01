@@ -19,12 +19,22 @@ public class ItemSlot : MonoBehaviour
    {
       _itemName.text = item.data.itemName;
       _itemIcon.sprite = item.data.itemIcon;
-
+      
       if (item.stackSize <= 1)
       {
-         _stackObject.SetActive(true);
-         return;
+         _stackObject.SetActive(false); // oculta si no hay más de 1
       }
+      else
+      {
+         _stackObject.SetActive(true);
+         _stackNumber.text = item.stackSize.ToString();
+      }
+
+      // if (item.stackSize <= 1)
+      // {
+      //    _stackObject.SetActive(true);
+      //    return;
+      // }
       
       _stackNumber.text = item.stackSize.ToString();
    }
