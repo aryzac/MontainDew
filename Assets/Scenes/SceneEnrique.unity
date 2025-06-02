@@ -710,6 +710,10 @@ PrefabInstance:
       value: Muzzle Flare (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c29be5318a2071046bd3c852f0888c89, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c29be5318a2071046bd3c852f0888c89, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -760,6 +764,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7870372186605076365, guid: 4e4de265cca201f4f9217da49987da97, type: 3}
   m_PrefabInstance: {fileID: 1077253114}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &529813320 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+  m_PrefabInstance: {fileID: 584119779}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &529940202 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c29be5318a2071046bd3c852f0888c89, type: 3}
@@ -770,6 +779,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c29be5318a2071046bd3c852f0888c89, type: 3}
   m_PrefabInstance: {fileID: 1021108091}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &583620511 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+  m_PrefabInstance: {fileID: 907992288}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &584119779
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 79491227561700745, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: destino
+      value: 
+      objectReference: {fileID: 583620511}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.267447
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 50.006104
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20.015965
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449371787398725322, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_Name
+      value: Transporter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
 --- !u!1001 &612324399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -890,6 +965,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c29be5318a2071046bd3c852f0888c89, type: 3}
       propertyPath: m_Name
       value: Muzzle Flare
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c29be5318a2071046bd3c852f0888c89, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c29be5318a2071046bd3c852f0888c89, type: 3}
       propertyPath: m_IsActive
@@ -1177,6 +1256,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33756e88ea5d4b243b725058442b06a8, type: 3}
+--- !u!1001 &907992288
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 79491227561700745, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: destino
+      value: 
+      objectReference: {fileID: 529813320}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.423473
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 50.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 73.86385
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549122152332886068, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449371787398725322, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_Name
+      value: Transporter (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
 --- !u!1001 &1021108091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1240,6 +1380,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c29be5318a2071046bd3c852f0888c89, type: 3}
       propertyPath: m_Name
       value: Muzzle Flare (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c29be5318a2071046bd3c852f0888c89, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c29be5318a2071046bd3c852f0888c89, type: 3}
       propertyPath: m_IsActive
@@ -1342,6 +1486,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8183248850295366421, guid: 4e4de265cca201f4f9217da49987da97, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 55.470947
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183248850295366421, guid: 4e4de265cca201f4f9217da49987da97, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 82.72351
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 778580665546875108, guid: 4e4de265cca201f4f9217da49987da97, type: 3}
     m_RemovedGameObjects: []
@@ -1405,7 +1557,7 @@ MonoBehaviour:
   cam: {fileID: 66799488}
   validLayers:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 1
   impactEffect: {fileID: 4335124922852440262, guid: 8472e4875d07dd049a1dde2be3b37847, type: 3}
   damageEffect: {fileID: 1574830710504911244, guid: 771761a99d18d114284f6e8d8b0c9760, type: 3}
   muzzleFlare: {fileID: 529940202}
@@ -1865,6 +2017,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c29be5318a2071046bd3c852f0888c89, type: 3}
       propertyPath: m_Name
       value: Muzzle Flare (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c29be5318a2071046bd3c852f0888c89, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c29be5318a2071046bd3c852f0888c89, type: 3}
       propertyPath: m_IsActive
@@ -2404,9 +2560,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1457247655264035160, guid: 14519bee3c82ee84584863534feb8953, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492485395980199636, guid: 14519bee3c82ee84584863534feb8953, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159415454127028169, guid: 14519bee3c82ee84584863534feb8953, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3458181457038177875, guid: 14519bee3c82ee84584863534feb8953, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3458181457038177875, guid: 14519bee3c82ee84584863534feb8953, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3458181457038177875, guid: 14519bee3c82ee84584863534feb8953, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618201068966843705, guid: 14519bee3c82ee84584863534feb8953, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618201068966843705, guid: 14519bee3c82ee84584863534feb8953, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 5926515899494249474, guid: 14519bee3c82ee84584863534feb8953, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6041334281893967486, guid: 14519bee3c82ee84584863534feb8953, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2448,8 +2636,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6110123407364218784, guid: 14519bee3c82ee84584863534feb8953, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 6731786418741302446, guid: 14519bee3c82ee84584863534feb8953, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000166283917056402, guid: 14519bee3c82ee84584863534feb8953, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -2986,3 +3182,5 @@ SceneRoots:
   - {fileID: 882260496}
   - {fileID: 2019552806}
   - {fileID: 691856486}
+  - {fileID: 584119779}
+  - {fileID: 907992288}
