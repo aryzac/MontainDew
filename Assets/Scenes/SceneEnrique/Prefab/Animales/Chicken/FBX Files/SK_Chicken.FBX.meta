@@ -1,0 +1,196 @@
+fileFormatVersion: 2
+guid: d3412d9a75167e541b11c8b9ec1ce1e6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: CHICKEN_
+    100002: CHICKEN_ Head
+    100004: CHICKEN_ L Calf
+    100006: CHICKEN_ L Clavicle
+    100008: CHICKEN_ L Foot
+    100010: CHICKEN_ L Forearm
+    100012: CHICKEN_ L Hand
+    100014: CHICKEN_ L HorseLink
+    100016: CHICKEN_ L Thigh
+    100018: CHICKEN_ L Toe0
+    100020: CHICKEN_ L Toe01
+    100022: CHICKEN_ L Toe1
+    100024: CHICKEN_ L Toe11
+    100026: CHICKEN_ L Toe2
+    100028: CHICKEN_ L Toe21
+    100030: CHICKEN_ L Toe3
+    100032: CHICKEN_ L Toe31
+    100034: CHICKEN_ L UpperArm
+    100036: CHICKEN_ Neck
+    100038: CHICKEN_ Neck1
+    100040: CHICKEN_ Neck2
+    100042: CHICKEN_ Pelvis
+    100044: CHICKEN_ Queue de cheval 1
+    100046: CHICKEN_ R Calf
+    100048: CHICKEN_ R Clavicle
+    100050: CHICKEN_ R Foot
+    100052: CHICKEN_ R Forearm
+    100054: CHICKEN_ R Hand
+    100056: CHICKEN_ R HorseLink
+    100058: CHICKEN_ R Thigh
+    100060: CHICKEN_ R Toe0
+    100062: CHICKEN_ R Toe01
+    100064: CHICKEN_ R Toe1
+    100066: CHICKEN_ R Toe11
+    100068: CHICKEN_ R Toe2
+    100070: CHICKEN_ R Toe21
+    100072: CHICKEN_ R Toe3
+    100074: CHICKEN_ R Toe31
+    100076: CHICKEN_ R UpperArm
+    100078: CHICKEN_ Spine
+    100080: CHICKEN_ Tail
+    100082: Chicken_LOD0
+    100084: Chicken_LOD1
+    100086: root
+    100088: //RootNode
+    400000: CHICKEN_
+    400002: CHICKEN_ Head
+    400004: CHICKEN_ L Calf
+    400006: CHICKEN_ L Clavicle
+    400008: CHICKEN_ L Foot
+    400010: CHICKEN_ L Forearm
+    400012: CHICKEN_ L Hand
+    400014: CHICKEN_ L HorseLink
+    400016: CHICKEN_ L Thigh
+    400018: CHICKEN_ L Toe0
+    400020: CHICKEN_ L Toe01
+    400022: CHICKEN_ L Toe1
+    400024: CHICKEN_ L Toe11
+    400026: CHICKEN_ L Toe2
+    400028: CHICKEN_ L Toe21
+    400030: CHICKEN_ L Toe3
+    400032: CHICKEN_ L Toe31
+    400034: CHICKEN_ L UpperArm
+    400036: CHICKEN_ Neck
+    400038: CHICKEN_ Neck1
+    400040: CHICKEN_ Neck2
+    400042: CHICKEN_ Pelvis
+    400044: CHICKEN_ Queue de cheval 1
+    400046: CHICKEN_ R Calf
+    400048: CHICKEN_ R Clavicle
+    400050: CHICKEN_ R Foot
+    400052: CHICKEN_ R Forearm
+    400054: CHICKEN_ R Hand
+    400056: CHICKEN_ R HorseLink
+    400058: CHICKEN_ R Thigh
+    400060: CHICKEN_ R Toe0
+    400062: CHICKEN_ R Toe01
+    400064: CHICKEN_ R Toe1
+    400066: CHICKEN_ R Toe11
+    400068: CHICKEN_ R Toe2
+    400070: CHICKEN_ R Toe21
+    400072: CHICKEN_ R Toe3
+    400074: CHICKEN_ R Toe31
+    400076: CHICKEN_ R UpperArm
+    400078: CHICKEN_ Spine
+    400080: CHICKEN_ Tail
+    400082: Chicken_LOD0
+    400084: Chicken_LOD1
+    400086: root
+    400088: //RootNode
+    2100000: M_Chicken
+    4300000: Chicken_LOD0
+    4300002: Chicken_LOD1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Chicken_LOD0
+    13700002: Chicken_LOD1
+    20500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Chicken
+    second: {fileID: 2100000, guid: 7622750597563e44095000c4b50f2cc1, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.01
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
