@@ -234,7 +234,7 @@ public class EnemyController : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && explode == true)
         {
             // Causar daño al jugador
-            Debug.Log("Enemy Exploded!"); // Imprimir en la consola que el enemigo ha explotado
+            // Debug.Log("Enemy Exploded!"); // Imprimir en la consola que el enemigo ha explotado
             Instantiate(explosionEffect, other.transform.position, Quaternion.identity); // Instanciar el efecto de daño en la posición del jugador
             Instantiate(explosionEffect, transform.position, Quaternion.identity); // Instanciar el efecto de daño en la posición del enemigo
 
