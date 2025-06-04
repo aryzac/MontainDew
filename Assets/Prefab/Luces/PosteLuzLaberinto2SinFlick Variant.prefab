@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7422999902089280388
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 562371654505147060, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 134.94345
+      objectReference: {fileID: 0}
+    - target: {fileID: 562371654505147060, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 50.601604
+      objectReference: {fileID: 0}
+    - target: {fileID: 562371654505147060, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 128.70517
+      objectReference: {fileID: 0}
+    - target: {fileID: 562371654505147060, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.70728946
+      objectReference: {fileID: 0}
+    - target: {fileID: 562371654505147060, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00067888974
+      objectReference: {fileID: 0}
+    - target: {fileID: 562371654505147060, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7069234
+      objectReference: {fileID: 0}
+    - target: {fileID: 562371654505147060, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0006785386
+      objectReference: {fileID: 0}
+    - target: {fileID: 562371654505147060, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 562371654505147060, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -270.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 562371654505147060, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 902446875187572750, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_Name
+      value: PosteLuzLaberinto2SinFlick Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913934273089878189, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_Name
+      value: PointLightLab2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513062938982179264, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_Name
+      value: PointLightLab2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588328873703504281, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_Name
+      value: PointLightLab2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}

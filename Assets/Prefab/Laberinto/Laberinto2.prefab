@@ -594,7 +594,15 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6413774988244458762}
+  - {fileID: 3391659338789657343}
+  - {fileID: 3743950309434357951}
+  - {fileID: 821195540755544041}
+  - {fileID: 2599334773187520520}
+  - {fileID: 2118516595769781227}
+  - {fileID: 6300024972999989945}
+  - {fileID: 490061250982585644}
   m_Father: {fileID: 9098763624877578001}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8770856569044923917
@@ -19432,6 +19440,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4478235978383186, guid: d8ebd34c38d3d0a40b5422c0fd136471, type: 3}
   m_PrefabInstance: {fileID: 3190346700597441247}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3191609551770618212
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5354118146478066091}
+    m_Modifications:
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.54999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 46.118423
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 56.65532
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.608017
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.71141285
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00048499944
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70277375
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0008283175
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.106
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -270.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.028
+      objectReference: {fileID: 0}
+    - target: {fileID: 581130808858364193, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_Name
+      value: PosteLuzLaberinto22
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+--- !u!4 &3391659338789657343 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+  m_PrefabInstance: {fileID: 3191609551770618212}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3192189859834242472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21415,6 +21489,72 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4169168387777590, guid: 8f8e8b461fdf4c140a82a526fc737dfb, type: 3}
   m_PrefabInstance: {fileID: 3501315136266748411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3507856816899222308
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5354118146478066091}
+    m_Modifications:
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.54999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 62.00725
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 56.68052
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.586792
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.71141285
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00048499944
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70277375
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0008283175
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.106
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -270.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.028
+      objectReference: {fileID: 0}
+    - target: {fileID: 581130808858364193, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_Name
+      value: PosteLuzLaberinto23
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+--- !u!4 &3743950309434357951 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+  m_PrefabInstance: {fileID: 3507856816899222308}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3522075687906405066
 PrefabInstance:
@@ -23895,6 +24035,72 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4478235978383186, guid: d8ebd34c38d3d0a40b5422c0fd136471, type: 3}
   m_PrefabInstance: {fileID: 3991545933205287524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4008228176492514185
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5354118146478066091}
+    m_Modifications:
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.8833
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 56.050884
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.695786
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9659923
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00024866685
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.25856936
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0009270765
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.055
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -330.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.095
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747855692660018058, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_Name
+      value: PosteLuzLaberinto2SF4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+--- !u!4 &6300024972999989945 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+  m_PrefabInstance: {fileID: 4008228176492514185}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4037757036773323561
 PrefabInstance:
@@ -29413,6 +29619,72 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4478235978383186, guid: d8ebd34c38d3d0a40b5422c0fd136471, type: 3}
   m_PrefabInstance: {fileID: 4960293580898393971}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4961990608012245304
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5354118146478066091}
+    m_Modifications:
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.54999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 85.2089
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 56.188057
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 40.521973
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.70728946
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00067888974
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7069234
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0006785386
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -270.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747855692660018058, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_Name
+      value: PosteLuzLaberinto2SF2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+--- !u!4 &2599334773187520520 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+  m_PrefabInstance: {fileID: 4961990608012245304}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4972479473678273621
 PrefabInstance:
@@ -38342,6 +38614,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4478235978383186, guid: d8ebd34c38d3d0a40b5422c0fd136471, type: 3}
   m_PrefabInstance: {fileID: 6508715488052205138}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6510245276712767121
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5354118146478066091}
+    m_Modifications:
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.54999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 107.94496
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 56.77265
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.506393
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0061086863
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0009286554
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9999809
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00024276227
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.028
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.106
+      objectReference: {fileID: 0}
+    - target: {fileID: 581130808858364193, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+      propertyPath: m_Name
+      value: PosteLuzLaberinto21
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+--- !u!4 &6413774988244458762 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 241865933016634267, guid: abb39ca5e02ec774b926c520b9af7dbe, type: 3}
+  m_PrefabInstance: {fileID: 6510245276712767121}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6515366045376341658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42992,6 +43330,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4478235978383186, guid: d8ebd34c38d3d0a40b5422c0fd136471, type: 3}
   m_PrefabInstance: {fileID: 7346369292998198631}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7350777304845218844
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5354118146478066091}
+    m_Modifications:
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.54999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.988489
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 56.8699
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -42.81991
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.6033661
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.12865052
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7868459
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.016490988
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -10.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -466.017
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 10.698
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747855692660018058, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_Name
+      value: PosteLuzLaberinto2SF5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+--- !u!4 &490061250982585644 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+  m_PrefabInstance: {fileID: 7350777304845218844}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7351028412011104689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45595,6 +45999,72 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4478235978383186, guid: d8ebd34c38d3d0a40b5422c0fd136471, type: 3}
   m_PrefabInstance: {fileID: 7746671647424515824}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7758367217977337561
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5354118146478066091}
+    m_Modifications:
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.54999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 69.54574
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 56.672867
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.387741
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6085557
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0007613467
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7935107
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00058451464
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.106
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -105.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.028
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747855692660018058, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_Name
+      value: PosteLuzLaberinto2SF
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+--- !u!4 &821195540755544041 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+  m_PrefabInstance: {fileID: 7758367217977337561}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7778024692044635211
 PrefabInstance:
@@ -53717,6 +54187,72 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4478235978383186, guid: d8ebd34c38d3d0a40b5422c0fd136471, type: 3}
   m_PrefabInstance: {fileID: 9048773522227479780}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9054560176218962651
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5354118146478066091}
+    m_Modifications:
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 32.024147
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 56.1256
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 40.124878
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9659923
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00024866685
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.25856936
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0009270765
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.055
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -330.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.095
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747855692660018058, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+      propertyPath: m_Name
+      value: PosteLuzLaberinto2SF3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+--- !u!4 &2118516595769781227 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6975575679245832496, guid: 250ab3069b3f8b9408658ace58f7b785, type: 3}
+  m_PrefabInstance: {fileID: 9054560176218962651}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9084038362436177193
 PrefabInstance:
