@@ -22,7 +22,7 @@ public class Transporter : MonoBehaviour
 
         if (!other.CompareTag("Player"))
         {
-            Debug.Log("El objeto no es el jugador, es: " + other.tag);
+            // Debug.Log("El objeto no es el jugador, es: " + other.tag);
             return;
         }
 
