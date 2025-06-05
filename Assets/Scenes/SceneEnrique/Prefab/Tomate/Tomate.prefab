@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3576351387519235387}
   m_Layer: 0
   m_Name: Tomate
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 8294772200224533060}
   - component: {fileID: 3950270870798603991}
   m_Layer: 0
-  m_Name: tom (1)
+  m_Name: tom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
