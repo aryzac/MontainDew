@@ -166,15 +166,15 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.6
+  - screenRelativeHeight: 0.7534888
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23480878569182784}
-  - screenRelativeHeight: 0.3
+  - screenRelativeHeight: 0.5478971
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 1488906062567018533}
-  - screenRelativeHeight: 0.1
+  - screenRelativeHeight: 0.1117391
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 147956161894908035}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 147956161894908035}
   - component: {fileID: 2366547912208056775}
   m_Layer: 0
-  m_Name: forestpack_tree_fir_tall_LOD2
+  m_Name: Pino_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 1488906062567018533}
   - component: {fileID: 2685510678771136373}
   m_Layer: 0
-  m_Name: forestpack_tree_fir_tall_LOD1
+  m_Name: Pino_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

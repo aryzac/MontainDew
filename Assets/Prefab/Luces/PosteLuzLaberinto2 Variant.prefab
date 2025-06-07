@@ -56,6 +56,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PointLightLab2
       objectReference: {fileID: 0}
+    - target: {fileID: 4726507618574114245, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.3967346
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726507618574114245, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.20102988
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726507618574114245, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
+      propertyPath: m_LODs.Array.data[2].screenRelativeHeight
+      value: 0.09516481
+      objectReference: {fileID: 0}
     - target: {fileID: 7513062938982179264, guid: a6bce087e7b33084f91bc39293199c3b, type: 3}
       propertyPath: m_Name
       value: PointLightLab2

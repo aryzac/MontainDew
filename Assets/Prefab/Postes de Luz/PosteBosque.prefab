@@ -4090,7 +4090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2d92609aec500d94b8b1c66ad5d4b830, type: 3}
       propertyPath: m_Name
-      value: Poste
+      value: PosteBosque
       objectReference: {fileID: 0}
     - target: {fileID: 2315380221061129453, guid: 2d92609aec500d94b8b1c66ad5d4b830, type: 3}
       propertyPath: m_Name
@@ -4342,7 +4342,7 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.23804913
+  - screenRelativeHeight: 0.6033076
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 6831332809719181019}
@@ -4365,7 +4365,7 @@ LODGroup:
     - renderer: {fileID: 1127328308138390315}
     - renderer: {fileID: 4926273737401663886}
     - renderer: {fileID: 8757312410605992849}
-  - screenRelativeHeight: 0.08391161
+  - screenRelativeHeight: 0.2986963
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 8691108676011288616}
@@ -4388,7 +4388,7 @@ LODGroup:
     - renderer: {fileID: 8335746628354142725}
     - renderer: {fileID: 8202768823293426518}
     - renderer: {fileID: 4251507630847614794}
-  - screenRelativeHeight: 0.027970538
+  - screenRelativeHeight: 0.10450641
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 6251258374864007650}

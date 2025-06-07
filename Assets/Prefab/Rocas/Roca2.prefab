@@ -52,6 +52,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca2
       objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 7fa54512decbeac4890cdc7b711ae76a, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.49929744
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 7fa54512decbeac4890cdc7b711ae76a, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.30207518
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 7fa54512decbeac4890cdc7b711ae76a, type: 3}
+      propertyPath: m_LODs.Array.data[2].screenRelativeHeight
+      value: 0.047185604
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
