@@ -1,8 +1,16 @@
+using StarterAssets;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class TomateController : MonoBehaviour
 {
-    private PlayerController player; // Referencia al objeto del jugador
+
+    [ContextMenu("Recibir daño de prueba")]
+    void TestDamage()
+    {
+        TakeDamage(25);
+    }
+
+    private FirstPersonController player; // Referencia al objeto del jugador
 
     public float moveSpeed; // Velocidad de movimiento del enemigo
 
@@ -30,16 +38,16 @@ public class EnemyController : MonoBehaviour
     
     public float waitToDisappear = 4f; // Tiempo de espera para desaparecer después de morir
 
-    // Balas
-    public Transform shootPoint; // Punto de disparo del enemigo
-    public EnemyProjectile projectile; // Prefab del proyectil del enemigo
-    public float timeBetweenShots = 1f; // Tiempo entre disparos
-    private float shotCounter; // Contador de disparos
-    public float shotDamage; // Daño del proyectil
-
     // División
     public bool splitOnDeath; // Indica si el enemigo se divide al morir
-    public float minSize = .4f; // Tamaño mínimo del enemigo
+    
+    [Header("Split Settings")]
+    [SerializeField] private int maxDivisions = 3; // Cuántas veces puede dividirse como máximo
+    private float initialScale; // Tamaño inicial del enemigo
+    [SerializeField] private float ReductionFactor = 0.75f; // Factor de reducción al dividirse
+    private float minSize; // Tamaño mínimo del enemigo
+    [SerializeField] private int currentDivision = 0;
+
 
     // Saltos
     public float jumpForceMin = 5f; // Altura mínima del salto
@@ -58,21 +66,26 @@ public class EnemyController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        player = FindFirstObjectByType<PlayerController>(); // Encontrar el objeto del jugador en la escena
+        player = FindFirstObjectByType<FirstPersonController>();
 
         // Patrullaje
         strafeAmount = Random.Range(-.75f, .75f); // Cantidad de movimiento lateral aleatorio del enemigo
 
-        shotCounter = timeBetweenShots; // Inicializar el contador de disparos
         currentHealth = startingHealth; // Inicializar la vida restante al valor inicial
 
         jumpCounter = Random.Range(minJumpTime, maxJumpTime); // Inicializar el contador de salto
+
+        if (currentDivision == 0)
+        {
+            initialScale = transform.localScale.x;
+            minSize = initialScale * Mathf.Pow(ReductionFactor, maxDivisions);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isDead == true)
+        if (isDead == true)
         {
             waitToDisappear -= Time.deltaTime; // Reducir el contador de espera para desaparecer
 
@@ -112,37 +125,11 @@ public class EnemyController : MonoBehaviour
             if (distance > stopCloseRange) // Si el jugador esta en el rango de parada
             {
                 theRB.linearVelocity = (transform.forward + (transform.right * strafeAmount))* moveSpeed; // Movimiento del enemigo hacia el jugador con movimiento lateral aleatorio
-
-                anim.SetBool("Move", true); // Hacer que la animación de caminar se reproduzca cuando el enemigo se mueva
             }
             else
             {
                 theRB.linearVelocity = Vector3.zero; // Detener el movimiento del enemigo cuando está cerca del jugador
-
-                anim.SetBool("Move", false); // Hacer que la animación de caminar se detenga cuando el enemigo no se mueva
-            }
-
-            // Disparar proyectiles
-            shotCounter -= Time.deltaTime; // Reducir el contador de disparos
-            if (shotCounter <= 0) // Si el contador de disparos ha llegado a cero
-            {
-                if (Camera.main != null)
-                {
-                    shootPoint.LookAt(Camera.main.transform.position);
-                }
-                
-                EnemyProjectile newProjectile = Instantiate(projectile, shootPoint.position, shootPoint.rotation); // Instanciar un nuevo proyectil en el punto de disparo
-                newProjectile.damageAmount = shotDamage; // Asignar el daño del proyectil
-
-                newProjectile.transform.localScale = transform.localScale;  // Asignar la escala del proyectil al enemigo
-
-                shotCounter = timeBetweenShots; // Reiniciar el contador de disparos
-
-                anim.SetTrigger("shoot"); // Iniciar la animación de disparo
-
-            }
-
-            
+            }          
         }
         else
         {
@@ -153,7 +140,6 @@ public class EnemyController : MonoBehaviour
                     // Reducir el contador y detener el movimiento
                     waitCounter -= Time.deltaTime; // Reducir el contador de espera
                     theRB.linearVelocity = Vector3.zero; // Detener el movimiento del enemigo
-                    anim.SetBool("moving", false); // Hacer que la animación de caminar se detenga cuando el enemigo no se mueva
 
                     if (waitCounter <= 0) // Si el contador de espera ha llegado a cero
                     {
@@ -180,8 +166,6 @@ public class EnemyController : MonoBehaviour
             else
             {
                 theRB.linearVelocity = Vector3.zero; // Detener el movimiento del enemigo cuando está fuera del rango de persecución
-
-                anim.SetBool("Move", false); // Hacer que la animación de caminar se detenga cuando el enemigo no se mueva
             }
             
         }
@@ -192,33 +176,31 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(float damageToTake)
     {
-        // Debug.Log("Enemy hit"); // Imprimir un mensaje en la consola cuando el enemigo recibe daño
-
-        // Destroy(gameObject); // Destruir el objeto del enemigo
-
         currentHealth -= damageToTake;
 
         if (currentHealth <= 0)
         {
-            if(splitOnDeath == true) // Si el enemigo se divide al morir
+            if(splitOnDeath == true && currentDivision < maxDivisions) // Si el enemigo se divide al morir y el número de divisiones actuales es menor que el máximo permitido
             {
-                if(transform.localScale.x > minSize) // Si el tamaño del enemigo es menor o igual al tamaño mínimo
-                {
-                    startingHealth *= .75f; // Reducir la vida inicial al dividirse
+                    startingHealth *= ReductionFactor; // Reducir la vida inicial al dividirse
 
                     currentHealth = startingHealth; // Reiniciar la vida del enemigo
 
-                    shotDamage *= .75f; // Reducir el daño del proyectil al dividirse
-                    moveSpeed *= .75f; // Reducir la velocidad de movimiento al dividirse
-                    damageExplotion *= .75f; // Reducir el daño de explosión al dividirse
+                    moveSpeed *= ReductionFactor; // Reducir la velocidad de movimiento al dividirse
+                    damageExplotion *= ReductionFactor; // Reducir el daño de explosión al dividirse
 
                     GameObject clone1 = Instantiate(gameObject, transform.position + (transform.right * .5f * transform.localScale.x), Quaternion.identity); // Instanciar un nuevo enemigo en la posición del enemigo actual
                     GameObject clone2 = Instantiate(gameObject, transform.position + (-transform.right * .5f * transform.localScale.x), Quaternion.identity); // Instanciar otro nuevo enemigo en la posición del enemigo actual
 
-                    clone1.transform.localScale = transform.localScale * .75f; // Reducir la escala del primer clon
-                    clone2.transform.localScale = transform.localScale * .75f; // Reducir la escala del segundo clon
-                }
-                
+                    float newScale = transform.localScale.x * ReductionFactor; // Calcular la nueva escala del enemigo al dividirse
+                    clone1.transform.localScale = new Vector3(newScale, newScale, newScale); // Reducir la escala del primer clon
+                    clone2.transform.localScale = new Vector3(newScale, newScale, newScale); // Reducir la escala del segundo clon
+
+                    // Aumentar la división actual en los clones
+                    TomateController ctrl1 = clone1.GetComponent<TomateController>();
+                    TomateController ctrl2 = clone2.GetComponent<TomateController>();
+                    ctrl1.currentDivision = this.currentDivision + 1;
+                    ctrl2.currentDivision = this.currentDivision + 1;
             }
             anim.SetTrigger("death"); // inicia animación de muerte
 
@@ -232,8 +214,9 @@ public class EnemyController : MonoBehaviour
     }
 
     // Explota al tocar al jugador
-    void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision other)        
     {
+        // Verificar si el objeto con el que colisiona es el jugador y si el enemigo está configurado para explotar
         if (other.gameObject.CompareTag("Player") && explode == true)
         {
             // Causar daño al jugador
@@ -241,9 +224,8 @@ public class EnemyController : MonoBehaviour
             Instantiate(explosionEffect, other.transform.position, Quaternion.identity); // Instanciar el efecto de daño en la posición del jugador
             Instantiate(explosionEffect, transform.position, Quaternion.identity); // Instanciar el efecto de daño en la posición del enemigo
 
-            PlayerHealthController.instance.TakeDamage(damageExplotion); // Llamar al método TakeDamage del controlador de salud del jugador para reducir su salud
+            // PlayerHealthController.instance.TakeDamage(damageExplotion); // Llamar al método TakeDamage del controlador de salud del jugador para reducir su salud
             Destroy(gameObject);
         }
     }
-
 }
