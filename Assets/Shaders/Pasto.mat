@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5903267652591872196
+--- !u!114 &-7729635054353408377
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21,15 +21,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Pasto
-  m_Shader: {fileID: -6465566751694194690, guid: 0f60d49e4df2959438d86e3a520734f4, type: 3}
-  m_Parent: {fileID: -876546973899608171, guid: 0f60d49e4df2959438d86e3a520734f4, type: 3}
-  m_ModifiedSerializedProperties: 22
+  m_Shader: {fileID: -6465566751694194690, guid: e49d4c9a29e5cc54a8aaec3c7d7745f6, type: 3}
+  m_Parent: {fileID: -876546973899608171, guid: e49d4c9a29e5cc54a8aaec3c7d7745f6, type: 3}
+  m_ModifiedSerializedProperties: 30
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 1
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 1
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 1987
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: 2989
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
@@ -37,32 +37,15 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _AOMap:
-        m_Texture: {fileID: 2800000, guid: 2a423e8f240636c4eab27e1cc158731c, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BaseColorText:
-        m_Texture: {fileID: 2800000, guid: 01032e7b1cc20ff4bb846a32fd2fc31b, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: a7267fc849112f14a96e3be9c9ac8788, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 84980fbf89a127a4e92bf9a19417e46a, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SmoothnessMap:
-        m_Texture: {fileID: 2800000, guid: 99260a701661e1b428a672a17f8cd639, type: 3}
+    - _MainTexture:
+        m_Texture: {fileID: 2800000, guid: 5fcc4642695d6654aa3367485a2bc30a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _QueueControl: 0
-    - _QueueOffset: -13
-    - _WinSpeed: 5
-    m_Colors:
-    - _WindDirection: {r: 5, g: 6, b: 5, a: 0}
+    - _QueueControl: 1
+    - _QueueOffset: -11
+    - _Smoothness: 0.07
+    m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
