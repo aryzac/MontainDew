@@ -1,6 +1,5 @@
 ﻿// ========== MassiveLODBuilder.cs ==========
 // Ubicación: Assets/Scripts/MassiveLODBuilder.cs
-// Script modificado: no desactiva root, agrega chequeo de LODGroup
 
 using UnityEngine;
 using UnityEditor;
@@ -13,14 +12,13 @@ public class MassiveLODBuilder : MonoBehaviour
     [Header("Calidad por LOD (0 = peor, 1 = original)")]
     [Range(0f, 1f)] public float calidadLOD0 = 1.0f;
     [Range(0f, 1f)] public float calidadLOD1 = 0.5f;
-    [Range(0f, 1f)] public float calidadLOD2 = 0.2f;
+    [Range(0f, 1f)] public float calidadLOD2 = 0.1f;
 
     private const string carpetaDestino = "Assets/MeshesOptimized/";
 
     [ContextMenu("⚙ Generar LODs (Instancia en Escena)")]
     public void GenerarLODs()
     {
-        // Asegura carpeta destino
 #if UNITY_EDITOR
         if (!AssetDatabase.IsValidFolder(carpetaDestino.TrimEnd('/')))
         {
