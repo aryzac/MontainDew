@@ -967,7 +967,7 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     },
-    "m_TextureType": 0,
+    "m_TextureType": 1,
     "m_NormalMapSpace": 0,
     "m_EnableGlobalMipBias": true,
     "m_MipSamplingMode": 0
@@ -1957,8 +1957,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -70.40003204345703,
-            "y": -311.2000427246094,
+            "x": -153.59999084472657,
+            "y": -406.4000244140625,
             "width": 114.40003967285156,
             "height": 33.600006103515628
         }
@@ -2424,9 +2424,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.8762667775154114,
-        "g": 0.9169811010360718,
-        "b": 0.48271268606185915,
+        "r": 0.12121739238500595,
+        "g": 0.856603741645813,
+        "b": 0.1407298445701599,
         "a": 0.0
     },
     "isMainColor": false,
@@ -2806,7 +2806,7 @@
         "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"e4a35010778e2bd49b6c6186e90f3c8e\",\"type\":3}}",
         "m_Guid": ""
     },
-    "m_DefaultType": 0
+    "m_DefaultType": 3
 }
 
 {
@@ -3192,10 +3192,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 103.19991302490235,
-            "y": 319.199951171875,
-            "width": 208.00006103515626,
-            "height": 431.99993896484377
+            "x": 20.79996681213379,
+            "y": 131.99998474121095,
+            "width": 207.9999542236328,
+            "height": 432.0
         }
     },
     "m_Slots": [
