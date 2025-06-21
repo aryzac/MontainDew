@@ -47,18 +47,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 3294899961979872347}
     m_Modifications:
     - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.581571
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.58823526
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.37569574
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.564569
       objectReference: {fileID: 0}
@@ -120,18 +108,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3294899961979872347}
     m_Modifications:
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.581571
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.58823526
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.37569574
-      objectReference: {fileID: 0}
     - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.490951
@@ -195,18 +171,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 3294899961979872347}
     m_Modifications:
     - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.581571
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.58823526
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.37569574
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.2220306
       objectReference: {fileID: 0}
@@ -268,18 +232,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3294899961979872347}
     m_Modifications:
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.581571
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.58823526
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.37569574
-      objectReference: {fileID: 0}
     - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.3722076
@@ -343,18 +295,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 3294899961979872347}
     m_Modifications:
     - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.581571
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.58823526
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.37569574
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.3387449
       objectReference: {fileID: 0}
@@ -416,18 +356,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3294899961979872347}
     m_Modifications:
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.581571
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.58823526
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.37569574
-      objectReference: {fileID: 0}
     - target: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5285354
@@ -493,18 +421,6 @@ PrefabInstance:
     - target: {fileID: 7307076905119809777, guid: 2e1b08d804887684ca366f46f0035bb2, type: 3}
       propertyPath: m_Name
       value: fardo5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7938758827364637259, guid: 2e1b08d804887684ca366f46f0035bb2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5815708
-      objectReference: {fileID: 0}
-    - target: {fileID: 7938758827364637259, guid: 2e1b08d804887684ca366f46f0035bb2, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.37569574
-      objectReference: {fileID: 0}
-    - target: {fileID: 7938758827364637259, guid: 2e1b08d804887684ca366f46f0035bb2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5882352
       objectReference: {fileID: 0}
     - target: {fileID: 7938758827364637259, guid: 2e1b08d804887684ca366f46f0035bb2, type: 3}
       propertyPath: m_LocalPosition.x
