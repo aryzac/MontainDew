@@ -1,97 +1,133 @@
-using UnityEngine;
+ï»¿using UnityEngine;
+using TMPro;
 
-public class CrecimientoPlantas : MonoBehaviour
+public class CrecimientoPlanta : MonoBehaviour
 {
-    public enum EstadoTile
-    {
-        Virgen,     // Nunca arado ni sembrado
-        Sembrado,   // Semilla plantada, aún no arado
-        Arado,      // Tierra arada y lista para crecer
-        Creciendo,  // Planta creciendo (varias aguas)
-        Maduro      // Planta lista para cosechar
-    }
+    public enum Estado { Virgen, Arada, Plantada, Lista }
+    [HideInInspector] public Estado estado = Estado.Virgen;
 
-    [Header("Configuración de tiempos (segundos)")]
-    public float tiempoParaMadurar = 30f;
+    [Header("Referencias de Prefabs")]
+    public GameObject prefabHojita;
+    public GameObject prefabPlanta;
 
-    [Header("Cantidad de cosecha/ganancia")]
+    [Header("Tiempos")]
+    [Tooltip("Tiempo total en segundos para pasar de Plantada â†’ Lista")]
+    public float tiempoCrecimiento = 30f;
+    [Tooltip("% de reducciÃ³n de tiempo por cada riego (0â€“1)")]
+    [Range(0f, 1f)]
+    public float potenciaRiego = 0.2f;
+
+    [Header("Recompensa")]
     public int dineroPorCosecha = 5;
 
-    [HideInInspector]
-    public EstadoTile estadoActual = EstadoTile.Virgen;
+    // Internos
+    private float timerRestante;
+    private GameObject instanciaHojita;
+    private GameObject instanciaPlanta;
+    private TextMeshProUGUI textoEstado;
 
-    private float tiempoInicio;
-    private int cuentaRiegos;
-
-    /// <summary>
-    /// Arar el cantero (solo funciona si está Sembrado).
-    /// </summary>
-    public bool Arar()
+    void Awake()
     {
-        if (estadoActual != EstadoTile.Sembrado) return false;
-        estadoActual = EstadoTile.Arado;
-        Debug.Log("[CrecimientoPlanta] Tierra arada.");
-        return true;
-    }
+        // Buscar el TextMeshProUGUI en hijos
+        textoEstado = GetComponentInChildren<TextMeshProUGUI>();
+        if (textoEstado == null)
+            Debug.LogError("CrecimientoPlanta: no se encontrÃ³ TextMeshProUGUI en los hijos.");
 
-    /// <summary>
-    /// Plantar semilla (solo si está Virgen).
-    /// </summary>
-    public bool Plantar()
-    {
-        if (estadoActual != EstadoTile.Virgen) return false;
-        estadoActual = EstadoTile.Sembrado;
-        Debug.Log("[CrecimientoPlanta] Semilla plantada.");
-        return true;
-    }
-
-    /// <summary>
-    /// Regar la planta: si está Arado o Creciendo, inicia o acelera el crecimiento.
-    /// </summary>
-    public bool Regar()
-    {
-        if (estadoActual != EstadoTile.Arado && estadoActual != EstadoTile.Creciendo)
-            return false;
-
-        cuentaRiegos++;
-        if (estadoActual == EstadoTile.Arado)
-        {
-            estadoActual = EstadoTile.Creciendo;
-            tiempoInicio = Time.time;
-            Debug.Log("[CrecimientoPlanta] Comienza ciclo de crecimiento.");
-        }
-        else
-        {
-            Debug.Log("[CrecimientoPlanta] Riego extra recibido.");
-        }
-        return true;
+        // Inicializar estado
+        SetEstado(Estado.Virgen);
     }
 
     void Update()
     {
-        if (estadoActual == EstadoTile.Creciendo)
+        if (estado == Estado.Plantada)
         {
-            float t = Time.time - tiempoInicio;
-            // Acelerar según riegos: más riegos = menos tiempo
-            float factor = 1f / (1 + cuentaRiegos);
-            if (t * factor >= tiempoParaMadurar)
-            {
-                estadoActual = EstadoTile.Maduro;
-                Debug.Log("[CrecimientoPlanta] Planta madura.");
-            }
+            // Cuenta regresiva y actualizaciÃ³n de texto
+            timerRestante -= Time.deltaTime;
+            textoEstado.text = $"Germinando... ({timerRestante:0}s)";
+
+            if (timerRestante <= 0f)
+                SetEstado(Estado.Lista);
         }
     }
 
     /// <summary>
-    /// Cosechar la planta y generar dinero (solo si está Maduro).
+    /// Cambia de estado, actualiza texto e instancia visuales.
+    /// </summary>
+    void SetEstado(Estado nuevo)
+    {
+        // Destruir instancias anteriores
+        if (instanciaHojita) Destroy(instanciaHojita);
+        if (instanciaPlanta) Destroy(instanciaPlanta);
+
+        estado = nuevo;
+
+        switch (estado)
+        {
+            case Estado.Virgen:
+                textoEstado.text = "Tierra virgen";
+                break;
+
+            case Estado.Arada:
+                textoEstado.text = "Arada";
+                break;
+
+            case Estado.Plantada:
+                timerRestante = tiempoCrecimiento;
+                instanciaHojita = Instantiate(prefabHojita, transform);
+                textoEstado.text = $"Germinando... ({timerRestante:0}s)";
+                break;
+
+            case Estado.Lista:
+                instanciaPlanta = Instantiate(prefabPlanta, transform);
+                textoEstado.text = "Â¡Listo para cosechar!";
+                break;
+        }
+    }
+
+    /// <summary>
+    /// Arar: sÃ³lo si estamos en Virgen.
+    /// </summary>
+    public bool Arar()
+    {
+        if (estado != Estado.Virgen) return false;
+        SetEstado(Estado.Arada);
+        return true;
+    }
+
+    /// <summary>
+    /// Plantar semilla: sÃ³lo si estamos Arada.
+    /// </summary>
+    public bool PlantarSemilla()
+    {
+        if (estado != Estado.Arada) return false;
+        SetEstado(Estado.Plantada);
+        return true;
+    }
+
+    /// <summary>
+    /// Regar: sÃ³lo si estamos Plantada.
+    /// </summary>
+    public bool Regar()
+    {
+        if (estado != Estado.Plantada) return false;
+        // Reducir tiempo restante
+        float reduccion = tiempoCrecimiento * potenciaRiego;
+        timerRestante = Mathf.Max(timerRestante - reduccion, 0f);
+        // Actualizar texto inmediatamente
+        textoEstado.text = $"Germinando... ({timerRestante:0}s)";
+        return true;
+    }
+
+    /// <summary>
+    /// Cosechar: sÃ³lo si estamos Lista.
     /// </summary>
     public bool Cosechar()
     {
-        if (estadoActual != EstadoTile.Maduro) return false;
-        estadoActual = EstadoTile.Virgen;
-        cuentaRiegos = 0;
-        // TODO: Notificar al sistema de inventario/monedas
-        Debug.Log($"[CrecimientoPlanta] Planta cosechada. +{dineroPorCosecha} de dinero.");
+        if (estado != Estado.Lista) return false;
+        // Sumar dinero
+        GameManager.Instance.AÃ±adirDinero(dineroPorCosecha);
+        // Volver a tierra virgen
+        SetEstado(Estado.Virgen);
         return true;
     }
 }

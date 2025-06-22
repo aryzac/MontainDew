@@ -6334,8 +6334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64eb3d5b3104937408cebf38043a1def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrow: {fileID: 1287121797}
-  nextTarget: {fileID: 1387653050}
 --- !u!4 &325939680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 16146255110539035, guid: 011bfa11244d7ad41953130f767412f0, type: 3}
@@ -16234,6 +16232,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1525996977}
     m_Modifications:
+    - target: {fileID: 4332038687027716691, guid: 58c00d22ef4a3d74d822900589b90d76, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8378960195618425705, guid: 58c00d22ef4a3d74d822900589b90d76, type: 3}
       propertyPath: m_Name
       value: Rastrillo
@@ -19632,8 +19634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64eb3d5b3104937408cebf38043a1def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrow: {fileID: 1287121797}
-  nextTarget: {fileID: 0}
 --- !u!1001 &1116448460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22068,7 +22068,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4135013735270702856, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1525996977}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1964439235}
   m_SourcePrefab: {fileID: 100100000, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
 --- !u!4 &1245792547 stripped
 Transform:
@@ -22618,17 +22621,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 16146255110539035, guid: 011bfa11244d7ad41953130f767412f0, type: 3}
   m_PrefabInstance: {fileID: 1389153991}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1287121797 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6286871968259224578, guid: 990b22f63c73c4c4682d6f9bb946fda5, type: 3}
-  m_PrefabInstance: {fileID: 1275627972}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 293f68e32d7c80040abf708932bbc293, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1289673444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24669,8 +24661,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64eb3d5b3104937408cebf38043a1def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrow: {fileID: 1287121797}
-  nextTarget: {fileID: 0}
 --- !u!1001 &1389153991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29920,8 +29910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64eb3d5b3104937408cebf38043a1def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrow: {fileID: 1287121797}
-  nextTarget: {fileID: 27431789}
 --- !u!1001 &1675967977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34197,6 +34185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa1fb1ccd014194aa2e8ed228c37a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MasterVolume: 0.3
+  dinero: 0
 --- !u!4 &1963637457
 Transform:
   m_ObjectHideFlags: 0
@@ -34212,6 +34202,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1964439228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 1245792546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1964439235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964439228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6dfc83aee22f7744824b7362841c77a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanciaMax: 6
+  semillasData:
+  - {fileID: 11400000, guid: 3fc59574371d9da4d84c36771fe4ffb8, type: 2}
+  - {fileID: 11400000, guid: aba1b70b62b5b6f499d34d16af2bf69d, type: 2}
+  herramientaActiva: 1
 --- !u!1 &1964852832
 GameObject:
   m_ObjectHideFlags: 0

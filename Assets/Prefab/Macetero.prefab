@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 8505081503997754592}
   - component: {fileID: 5583298151697598642}
   - component: {fileID: 7623927163694428281}
+  - component: {fileID: 6255638343944905432}
   m_Layer: 0
   m_Name: Macetero
   m_TagString: Untagged
@@ -329,6 +330,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6255638343944905432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820380648135780931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d2edd25aec4ac4494fa1554bc87ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabHojita: {fileID: 1000013410243764, guid: 56b36da289d9a9e4cb37c5f588e23748, type: 3}
+  prefabPlanta: {fileID: 1000014111768446, guid: 2cf13a738fc434c46bda5ebf7ca44756, type: 3}
+  tiempoCrecimiento: 30
+  potenciaRiego: 0.2
+  dineroPorCosecha: 5
+  estado: 0
 --- !u!1 &5642632072727956056
 GameObject:
   m_ObjectHideFlags: 0
