@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneAlejo.unity
     guid: b2bc5081587da42489e1ffa50953239b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ScenePrincipal.unity
     guid: 1583f5b4f1fcaea459787ab63e9054a2
   m_configObjects:
