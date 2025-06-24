@@ -16,6 +16,7 @@ public class PlayerInteraccion : MonoBehaviour
     public TipoHerramienta herramientaActiva = TipoHerramienta.Ninguna;
 
     private Camera cam;
+    private ToolController toolController;
 
     void Awake()
     {
@@ -27,6 +28,10 @@ public class PlayerInteraccion : MonoBehaviour
             cam = Camera.main;
         else
             Debug.LogError("PlayerInteraccion: no se encontró ninguna cámara válida.");
+
+        toolController = FindObjectOfType<ToolController>();
+        if (toolController == null)
+            Debug.LogError("PlayerInteraccion: no se encontró ToolController en la escena.");
     }
 
     void Update()
@@ -56,6 +61,7 @@ public class PlayerInteraccion : MonoBehaviour
         {
             case CrecimientoPlanta.Estado.Virgen:
                 if (herramientaActiva == TipoHerramienta.Rastrillo)
+                    toolController.PlayRastrillar();
                     cp.Arar();
                 break;
 
@@ -66,6 +72,7 @@ public class PlayerInteraccion : MonoBehaviour
 
             case CrecimientoPlanta.Estado.Plantada:
                 if (herramientaActiva == TipoHerramienta.Regadera)
+                    toolController.PlayRegar();
                     cp.Regar();
                 break;
 
