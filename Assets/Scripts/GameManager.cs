@@ -18,18 +18,22 @@ public class GameManager : MonoBehaviour, IVolumeControl
     private void Awake()
     {
         Debug.Log("GM Awake");
-        MasterVolume = PlayerPrefs.GetFloat("MasterVolume", 0.3f);
+        MasterVolume = PlayerPrefs.GetFloat("MasterVolume", MasterVolume);
 
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(this);
+            
+            // Aplico el volumen global (AudioListener)
+            ApplyVolume();
 
             AlCambiarDinero?.Invoke(dinero);
         }
         else
         {
             Destroy(gameObject);
+            return;
         }
     }
 
@@ -44,9 +48,9 @@ public class GameManager : MonoBehaviour, IVolumeControl
     }
 
     /// <summary>
-    /// Añade la cantidad indicada al saldo y dispara el evento.
+    /// Aï¿½ade la cantidad indicada al saldo y dispara el evento.
     /// </summary>
-    public void AñadirDinero(int cantidad)
+    public void generarDinero(int cantidad)
     {
         if (cantidad <= 0) return;
         Dinero += cantidad;
@@ -77,10 +81,23 @@ public class GameManager : MonoBehaviour, IVolumeControl
     }
 
     /*SECCION SONIDO*/
+    // public void SetVolume(float newVolume)
+    // {
+    //     PlayerPrefs.SetFloat("MasterVolume", newVolume);
+    //     ApplyVolume();
+    // }
     public void SetVolume(float newVolume)
     {
-        PlayerPrefs.SetFloat("MasterVolume", newVolume);
+        // 1) Actualizo el campo
+        MasterVolume = Mathf.Clamp01(newVolume);
+        // 2) Guardo en prefs
+        PlayerPrefs.SetFloat("MasterVolume", MasterVolume);
+        PlayerPrefs.Save();
+        // 3) Aplico globalmente
         ApplyVolume();
+        // 4) Notifico al SoundController si existe
+        if (SoundController.Instance != null)
+            SoundController.Instance.UpdateVolume(MasterVolume);
     }
 
     public float GetVolume()
@@ -90,6 +107,9 @@ public class GameManager : MonoBehaviour, IVolumeControl
 
     private void ApplyVolume()
     {
+        
+        Debug.Log("Volumen inicial: " + MasterVolume);
+        
         AudioListener.volume = MasterVolume;
     }
     /*FIN SECCION SONIDO*/

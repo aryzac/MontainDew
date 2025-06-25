@@ -31,13 +31,22 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        MasterVolumeSlider.value = PlayerPrefs.GetFloat("MasterVolume", 0.3f);
-        soundController = GetComponent<SoundController>();
-
+        
+        soundController = SoundController.Instance;
         volumeControl = GameManager.Instance;
+        
+        // Inicializo el slider con el volumen actual
         MasterVolumeSlider.value = volumeControl.GetVolume();
 
+        // Arranco la mÃºsica
         soundController.PlaySoundLoop(Music);
+
+        // MasterVolumeSlider.value = PlayerPrefs.GetFloat("MasterVolume", 0.3f);
+        // soundController = GetComponent<SoundController>();
+
+        // MasterVolumeSlider.value = volumeControl.GetVolume();
+
+        // soundController.PlaySoundLoop(Music);
     }
 
     private void Awake()
@@ -78,7 +87,7 @@ public class MainMenu : MonoBehaviour
         soundController.PlaySound(ClickSound);
         Application.Quit();
 
-        // Si estamos en el editor, detener la ejecución
+        // Si estamos en el editor, detener la ejecuciï¿½n
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #endif

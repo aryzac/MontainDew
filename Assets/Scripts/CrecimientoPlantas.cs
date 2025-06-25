@@ -125,7 +125,7 @@ public class CrecimientoPlanta : MonoBehaviour
     {
         if (estado != Estado.Lista) return false;
         // Sumar dinero
-        GameManager.Instance.AñadirDinero(dineroPorCosecha);
+        GameManager.Instance.generarDinero(dineroPorCosecha);
         // Volver a tierra virgen
         SetEstado(Estado.Virgen);
         return true;
