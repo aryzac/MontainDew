@@ -46,6 +46,7 @@ Material:
     - _QueueControl: 1
     - _QueueOffset: -11
     - _Smoothness: 0.07
-    m_Colors: []
+    m_Colors:
+    - _Albedo: {r: 0.13443208, g: 0.90188676, b: 0.15073812, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
