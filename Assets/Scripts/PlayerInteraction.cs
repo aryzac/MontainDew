@@ -61,19 +61,23 @@ public class PlayerInteraccion : MonoBehaviour
         {
             case CrecimientoPlanta.Estado.Virgen:
                 if (herramientaActiva == TipoHerramienta.Rastrillo)
+                { 
                     toolController.PlayRastrillar();
                     cp.Arar();
+                }
                 break;
 
             case CrecimientoPlanta.Estado.Arada:
-                if (herramientaActiva == TipoHerramienta.Ninguna)
-                    PlantarConSemillaDisponible(cp);
+                if (herramientaActiva == TipoHerramienta.Ninguna) PlantarConSemillaDisponible(cp);
+
                 break;
 
             case CrecimientoPlanta.Estado.Plantada:
                 if (herramientaActiva == TipoHerramienta.Regadera)
+                {
                     toolController.PlayRegar();
                     cp.Regar();
+                }
                 break;
 
             case CrecimientoPlanta.Estado.Lista:
