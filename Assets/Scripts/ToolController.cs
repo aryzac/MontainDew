@@ -53,7 +53,7 @@ public class ToolController : MonoBehaviour
     }
 
     /*IMplementar funciones para ejecutar animaciones*/
-    public void PlayRastrillar() => animRastrillo.SetTrigger("Rastrillar");
+    public void PlayRastrillar() => animRastrillo.SetTrigger("ArarTrigger");
     public void PlayRegar() => animRegadera.SetTrigger("RegarTrigger");
 }
 
