@@ -12,12 +12,8 @@ public class ArrowTriggerZone : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
         if (arrow == null) return;
-        // Asegurarse de que la flecha está activa
-        if (!arrow.gameObject.activeSelf)
-        {
-            arrow.gameObject.SetActive(true);
-        }
-        Debug.Log(arrow.HasTarget + " - " + arrow.LookAtTarget + " - " + transform.name);
+
+        Debug.Log($"Trigger: {transform.name}, HasTarget: {arrow.HasTarget}, CurrentTarget: {(arrow.LookAtTarget != null ? arrow.LookAtTarget.name : "null")}, NextTarget: {(nextTarget != null ? nextTarget.name : "null")}");
 
         // Si este trigger es el objetivo actual
         if (arrow.HasTarget && arrow.LookAtTarget == transform)
@@ -35,10 +31,17 @@ public class ArrowTriggerZone : MonoBehaviour
             }
         }
 
-        // ?? Caso especial: si la flecha está apagada, iniciar destino inicial (ej. primer trigger)
-        if (!arrow.HasTarget && nextTarget != null)
+        // Si la flecha no tiene target pero este trigger SÍ tiene nextTarget
+        else if (!arrow.HasTarget && nextTarget != null)
         {
+            // Activar la flecha con el nuevo destino
             arrow.SetTarget(nextTarget);
+        }
+        // Si este trigger no tiene destino (nextTarget = null) y la flecha está encendida
+        else if (nextTarget == null && arrow.gameObject.activeSelf)
+        {
+            // Solo apagar si está encendida
+            arrow.ClearTarget();
         }
     }
 }
