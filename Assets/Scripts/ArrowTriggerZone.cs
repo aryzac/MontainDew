@@ -13,8 +13,6 @@ public class ArrowTriggerZone : MonoBehaviour
         if (!other.CompareTag("Player")) return;
         if (arrow == null) return;
 
-        Debug.Log($"Trigger: {transform.name}, HasTarget: {arrow.HasTarget}, CurrentTarget: {(arrow.LookAtTarget != null ? arrow.LookAtTarget.name : "null")}, NextTarget: {(nextTarget != null ? nextTarget.name : "null")}");
-
         // Si este trigger es el objetivo actual
         if (arrow.HasTarget && arrow.LookAtTarget == transform)
         {

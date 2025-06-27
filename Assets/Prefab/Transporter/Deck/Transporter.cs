@@ -20,12 +20,12 @@ public class Transporter : MonoBehaviour
     {
         EstadoPortal = GetComponent<BuyTeleport>();
         if (EstadoPortal == null)
-            Debug.Log("Imposible encontrar BuyPortal en este objeto");
+           // Debug.Log("Imposible encontrar BuyPortal en este objeto");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Algo entró al trigger: " + other.name);
+        // Debug.Log("Algo entró al trigger: " + other.name);
 
         if (!puedeTeletransportar)
         {
