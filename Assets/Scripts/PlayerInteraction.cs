@@ -114,7 +114,7 @@ public class PlayerInteraccion : MonoBehaviour
 
         if (seleccionada == null)
         {
-            Debug.LogWarning("No tienes semillas disponibles en el inventario.");
+            NotificationManager.Instance.ShowMessage("No tienes semillas disponibles en el inventario.");
             return;
         }
 

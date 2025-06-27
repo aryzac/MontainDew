@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour, IVolumeControl
     {
         if (cantidad <= 0) return;
         Dinero += cantidad;
-        Debug.Log($"[ControladorJuego] Dinero sumado: +{cantidad}, Total = {Dinero}");
+        NotificationManager.Instance.ShowMessage($"Dinero sumado: +{cantidad}, Total = {Dinero}");
     }
 
     /// <summary>
@@ -64,7 +64,6 @@ public class GameManager : MonoBehaviour, IVolumeControl
     {
         if (cantidad <= 0 || cantidad > Dinero) return false;
         Dinero -= cantidad;
-        Debug.Log($"[ControladorJuego] Dinero gastado: -{cantidad}, Total = {Dinero}");
         return true;
     }
 

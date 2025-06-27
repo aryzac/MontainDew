@@ -47,7 +47,7 @@ public class BuyTeleport : MonoBehaviour
         }
         else
         {
-            Debug.Log("dinero insuficiente para comprar el portal");
+            NotificationManager.Instance.ShowMessage("dinero insuficiente para comprar el portal");
         }
     }
 
