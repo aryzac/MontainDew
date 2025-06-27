@@ -61,21 +61,6 @@ public class Transporter : MonoBehaviour
         {
             cc.enabled = true;
         }
-
-        // Desactivar temporalmente este portal
-        puedeTeletransportar = false;
-
-        // Desactivar también el portal destino
-        Transporter portalDestino = destino.GetComponent<Transporter>();
-        if (portalDestino != null)
-        {
-            portalDestino.puedeTeletransportar = false;
-            Debug.Log("Se desactivó temporalmente el portal destino.");
-        }
-        else
-        {
-            Debug.LogWarning("El destino no tiene componente 'Transporter'.");
-        }
     }
 
     private void OnTriggerExit(Collider other)
