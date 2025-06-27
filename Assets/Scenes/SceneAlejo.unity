@@ -17540,6 +17540,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1717940698}
     - targetCorrespondingSourceObject: {fileID: 4135013735270702856, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1525996977}
@@ -17624,7 +17627,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1964439242}
     m_Modifications:
     - target: {fileID: 126662780617778222, guid: 990b22f63c73c4c4682d6f9bb946fda5, type: 3}
       propertyPath: m_Camera
@@ -24132,6 +24135,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5141386928858644332, guid: 8e1d969a79a783144b1ccf3d10010faf, type: 3}
   m_PrefabInstance: {fileID: 1715946388}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &1717940698 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7121112272968266420, guid: 990b22f63c73c4c4682d6f9bb946fda5, type: 3}
+  m_PrefabInstance: {fileID: 1275627972}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1724836838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27212,6 +27220,11 @@ MonoBehaviour:
   semilla1: {fileID: 11400000, guid: 3fc59574371d9da4d84c36771fe4ffb8, type: 2}
   semilla2: {fileID: 11400000, guid: aba1b70b62b5b6f499d34d16af2bf69d, type: 2}
   cantidadInicial: 5
+--- !u!4 &1964439242 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 1245792546}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1964852832
 GameObject:
   m_ObjectHideFlags: 0
@@ -29733,5 +29746,4 @@ SceneRoots:
   - {fileID: 1233050947}
   - {fileID: 624066395}
   - {fileID: 205592047}
-  - {fileID: 1275627972}
   - {fileID: 47344033}
