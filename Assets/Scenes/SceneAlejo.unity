@@ -2895,6 +2895,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tp_Laberinto_2
       objectReference: {fileID: 0}
+    - target: {fileID: 9184909455361523599, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: Destino
+      value: Laberinto 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184909455361523599, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: destino
+      value: Laberinto 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184909455361523599, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: costoPortal
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28371,6 +28383,22 @@ PrefabInstance:
     - target: {fileID: 2449371787398725322, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
       propertyPath: m_Name
       value: Tp_Laberinto_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184909455361523599, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: Destino
+      value: Laberinto 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184909455361523599, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: destino
+      value: Laberinto 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184909455361523599, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184909455361523599, guid: 8d232ae65c13c5445a6340b6c5f1fc16, type: 3}
+      propertyPath: costoPortal
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

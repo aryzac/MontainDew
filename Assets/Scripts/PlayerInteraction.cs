@@ -51,16 +51,22 @@ public class PlayerInteraccion : MonoBehaviour
         if (cam == null) return;
 
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
+
         if (!Physics.Raycast(ray, out var hit, distanciaMax))
             return;
 
         var cp = hit.collider.GetComponent<CrecimientoPlanta>();
 
-        var BoxCollided = hit.collider.GetComponent<CrecimientoPlanta>(); //CAMBIAR
+        var BoxCollided = hit.collider.GetComponentInParent<BuyTeleport>(); //CAMBIAR
         
         if (cp == null && BoxCollided == null) return;
 
-
+        if (BoxCollided != null)
+        {
+            BoxCollided.ComprarPortal();
+            return;
+        }
+        
         switch (cp.estado)
         {
             case CrecimientoPlanta.Estado.Virgen:

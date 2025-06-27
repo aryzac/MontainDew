@@ -9,6 +9,19 @@ public class Transporter : MonoBehaviour
     public float rotacionYAlLlegar = 90f;
 
     private bool puedeTeletransportar = true;
+    private BuyTeleport EstadoPortal;
+
+    public void SetearPortal(bool Estado)
+    {
+        puedeTeletransportar = Estado;
+    }
+
+    private void Awake()
+    {
+        EstadoPortal = GetComponent<BuyTeleport>();
+        if (EstadoPortal == null)
+            Debug.Log("Imposible encontrar BuyPortal en este objeto");
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -69,8 +82,18 @@ public class Transporter : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            puedeTeletransportar = true;
-            Debug.Log("Portal reactivado.");
+            if (EstadoPortal == null)
+            {
+                puedeTeletransportar = true;
+                Debug.Log("Portal reactivado.");
+            }
+            else if (EstadoPortal.PortalComprado()) {
+                puedeTeletransportar = true;
+            }
+            else
+            {
+                puedeTeletransportar = false;
+            }
         }
     }
 }
