@@ -55,7 +55,11 @@ public class PlayerInteraccion : MonoBehaviour
             return;
 
         var cp = hit.collider.GetComponent<CrecimientoPlanta>();
-        if (cp == null) return;
+
+        var BoxCollided = hit.collider.GetComponent<CrecimientoPlanta>(); //CAMBIAR
+        
+        if (cp == null && BoxCollided == null) return;
+
 
         switch (cp.estado)
         {
