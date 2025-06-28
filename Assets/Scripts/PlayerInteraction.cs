@@ -57,7 +57,7 @@ public class PlayerInteraccion : MonoBehaviour
 
         var cp = hit.collider.GetComponent<CrecimientoPlanta>();
 
-        var BoxCollided = hit.collider.GetComponentInParent<BuyTeleport>(); //CAMBIAR
+        var BoxCollided = hit.collider.GetComponentInParent<BuyTeleport>();
         
         if (cp == null && BoxCollided == null) return;
 
