@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2237365714967861937}
   - component: {fileID: 6537330468019879299}
-  - component: {fileID: 8805955841131845576}
+  - component: {fileID: 4298002640736661368}
   m_Layer: 0
   m_Name: Fennel
   m_TagString: Untagged
@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: aba1b70b62b5b6f499d34d16af2bf69d, type: 2}
---- !u!65 &8805955841131845576
-BoxCollider:
+--- !u!135 &4298002640736661368
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -67,8 +67,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.007264713, y: 0.0027796768, z: 0.00205687}
-  m_Center: {x: -0.000025885995, y: 0.000043871572, z: 0.000066841356}
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9207959612922063240
 GameObject:
   m_ObjectHideFlags: 0
